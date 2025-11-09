@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Good Morning, ANNU ☀️💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lobster+Two:wght@700&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#ff8fb1; /* bright pink */
+      --bg2:#ffd3e2; /* soft pink */
+      --bg3:#fff1a8; /* pastel yellow glow */
+      --bg4:#ffe07d; /* sunny yellow */
+      --card:#ffffffee;
+      --accent:#ff3f91; /* hot pink */
+      --accent2:#ffc300; /* golden yellow */
+      --accent3:#ffd6e7; /* light pink wash */
+      --text-dark:#1c1c1c;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; 
+      font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial;
+      color:#222; 
+      overflow-x:hidden; 
+      background: radial-gradient(1200px 800px at 10% 10%, var(--bg3), transparent 60%),
+                  radial-gradient(1000px 700px at 90% 20%, var(--bg4), transparent 60%),
+                  radial-gradient(900px 600px at 30% 90%, var(--bg2), transparent 60%),
+                  linear-gradient(120deg, var(--bg1), var(--bg2));
+      animation: bgShift 18s ease-in-out infinite alternate;
+    }
+
+    @keyframes bgShift{
+      0%{background-position:0 0, 50% 50%, 0 100%, 0 0}
+      100%{background-position:30% 10%, 100% 50%, 10% 70%, 100% 0}
+    }
+
+    /* Floating emoji confetti */
+    .floaty{position:fixed; left:var(--x); animation: floatUp linear var(--t) infinite; filter: drop-shadow(0 8px 12px rgba(0,0,0,.15));}
+    @keyframes floatUp{ 
+      0%{ transform:translate3d(0, 110vh, 0) rotate(0deg); opacity:0 }
+      10%{ opacity:1 }
+      100%{ transform:translate3d(0, -20vh, 0) rotate(360deg); opacity:0 }
+    }
+
+    .container{ max-width:1100px; margin:0 auto; padding: clamp(16px, 4vw, 32px); }
+
+    .glass{
+      background: linear-gradient(180deg, rgba(255,255,255,.65), rgba(255,255,255,.35));
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,.6);
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.15);
+    }
+
+    /* DP (display picture) ring */
+    .dp{ width:140px; height:140px; margin:0 auto 12px; border-radius:50%; padding:4px; 
+      background: conic-gradient(from 180deg at 50% 50%, var(--accent), var(--accent2), var(--accent));
+      box-shadow: 0 10px 30px rgba(0,0,0,.18), 0 0 0 6px rgba(255,255,255,.55) inset;
+    }
+    .dp img{ width:100%; height:100%; border-radius:50%; object-fit:cover; display:block; border:4px solid #fff; }
+
+    header.hero{ 
+      margin-top: 40px; 
+      text-align:center; 
+      padding: 36px 20px 28px; 
+    }
+
+    .chip{
+      display:inline-flex; align-items:center; gap:8px; 
+      padding:10px 14px; border-radius:999px; font-weight:600; letter-spacing:.5px;
+      background: linear-gradient(90deg, rgba(255,255,255,.8), rgba(255,255,255,.5));
+      border:1px solid rgba(255,255,255,.9);
+      box-shadow: 0 6px 20px rgba(0,0,0,.12);
+    }
+
+    .title{
+      font-family:'Lobster Two', cursive; 
+      font-size: clamp(56px, 10vw, 120px);
+      line-height:1;
+      margin: 10px 0 6px; 
+      color:#d0006f; /* solid, highly visible */
+      -webkit-text-stroke: 4px rgba(255,255,255,.65); /* outline for contrast */
+      text-shadow: 0 3px 0 rgba(255,255,255,.9), 0 8px 20px rgba(208,0,111,.28), 0 18px 40px rgba(208,0,111,.18);
+    }
+    @keyframes shimmer{ 0%{background-position: 0% 50%} 50%{background-position: 100% 50%} 100%{background-position: 0% 50%} }
+
+    .subtitle{
+      font-size: clamp(16px, 2.6vw, 22px); 
+      color:#2a2a2a; 
+      margin:0 auto 18px; 
+      max-width: 780px;
+      text-wrap: balance;
+    }
+
+    .desi-line{ 
+      font-weight:800; font-size: clamp(18px, 3vw, 28px);
+      color:#b1005a; /* deep pink for contrast */
+      background: #fff6b0; /* soft yellow pill for readability */
+      padding: 10px 14px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(177,0,90,.15);
+      text-shadow: 0 1px 0 rgba(255,255,255,.7);
+      margin: 10px auto 24px;
+      display: inline-block;
+    }
+
+    .row{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+
+    .card{
+      padding: 18px; border-radius: 18px; position:relative; overflow:hidden;
+      border: 1px dashed rgba(0,0,0,.08);
+      background: radial-gradient(120% 120% at 0% 0%, #ffffffee, #ffffffcc 60%, #ffffffaa 100%);
+    }
+
+    .card::before{
+      content:""; position:absolute; inset:-1px; border-radius:18px; padding:1px; background:
+        linear-gradient(135deg, rgba(255,139,197,.9), rgba(255,218,121,.9), rgba(161,229,255,.9));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude; 
+      pointer-events:none;
+    }
+
+    .card h3{ margin: 8px 0 10px; font-size: 18px; letter-spacing:.3px }
+    .card p{ margin: 0; font-size: 15px; color:#333; }
+
+    .big-quote{
+      margin: 24px auto 10px; 
+      padding: clamp(14px, 2.2vw, 20px);
+      border-radius: 18px; 
+      text-align:center;
+      background: linear-gradient(90deg, rgba(255,255,255,.82), rgba(255,255,255,.58));
+      border: 1px solid rgba(255,255,255,.9);
+      box-shadow: 0 12px 40px rgba(0,0,0,.12);
+      font-size: clamp(18px, 3.2vw, 28px);
+      font-weight: 700;
+      line-height:1.4;
+    }
+
+    .actions{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin: 20px 0 8px }
+
+    .btn{
+      --glow: rgba(255, 105, 180, .55);
+      display:inline-flex; align-items:center; gap:10px; 
+      padding: 12px 18px; border-radius: 999px; font-weight:800; letter-spacing:.4px;
+      background: linear-gradient(90deg, #ff7eb3, #ffd166, #7ee8fa);
+      background-size: 200% 100%;
+      color:#222; text-decoration:none; border:none; cursor:pointer;
+      box-shadow: 0 8px 24px var(--glow);
+      transition: transform .2s ease, box-shadow .2s ease, background-position .8s ease;
+    }
+    .btn:hover{ transform: translateY(-2px); background-position: 100% 0; box-shadow: 0 10px 30px rgba(255,105,180,.7) }
+
+    footer{ text-align:center; opacity:.85; font-size:13px; padding: 28px 10px 40px }
+
+    /* Sparkles */
+    .sparkle{ position:absolute; width:10px; height:10px; pointer-events:none; }
+    .sparkle::before{ content:"✨"; font-size:16px; }
+  /* Android-friendly tweaks */
+    @media (max-width: 480px){
+      .container{ padding: 14px; }
+      .dp{ width:110px; height:110px; margin-bottom: 10px; }
+      header.hero{ padding: 20px 12px; margin-top: 14px; }
+      .title{ font-size: 56px; -webkit-text-stroke: 3px rgba(255,255,255,.75); }
+      .row{ grid-template-columns: 1fr; gap: 14px; }
+      .card{ padding: 14px; }
+      .btn{ width: 100%; justify-content: center; padding: 14px 16px; }
+      .subtitle{ font-size: 16px; }
+      .big-quote{ font-size: 18px; }
+    }
+      header.hero{ padding: 22px 14px; margin-top: 18px; }
+      .row{ grid-template-columns: 1fr; gap: 14px; }
+      .card{ padding: 14px; }
+      .btn{ width: 100%; justify-content: center; padding: 14px 16px; }
+      .subtitle{ font-size: 16px; }
+      .big-quote{ font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating Emoji Confetti (randomized via JS) -->
+  <div id="confetti"></div>
+
+  <div class="container">
+    <header class="hero glass">
+      <figure class="dp" aria-label="Annu display picture">
+        <img src="t7.jpg" alt="Annu DP (replace with your photo URL)" />
+      </figure>
+      <div class="chip">☀️ Subah ki meethi hawa</div>
+      <h1 class="title">Good Morning, <span style="white-space:nowrap">BRO 💖</span></h1>
+      <p class="subtitle">Utho meri <strong>bestie</strong> ✨ — aaj ka din tumhari <em>muskurahat</em> se aur bhi roshan ho! Chai ki narmi, suraj ki garmi, aur tumhari <em>vibe</em> ki masti — bas perfect combo! 🌼🌸</p>
+      <p class="desi-line">“Tumhari smile mera roz ka <em>sunshine</em> hai — aaj bhi khushiyon ki <em>rain</em> ho, Annu!” 💫</p>
+
+      <div class="actions">
+        <button class="btn" id="copyBtn">📋 Copy Wish</button>
+        <a class="btn" id="waShare" href="#" target="_blank" rel="noopener">📱 Share on WhatsApp</a>
+      </div>
+    </header>
+
+    <section class="big-quote glass" id="rotator">
+      🌟 “Annu, tumhari nazron mein subah ka <em>suraj</em> chamakta hai — dil garden–garden ho jata hai!”
+    </section>
+
+    <section class="row" aria-label="Compliments for Annu">
+      <article class="card">
+        <h3>🌸 Dil-se Tareef</h3>
+        <p>Tumhari <strong>smile</strong> itni meethi hai ki subah ka mood instant accha ho jata hai. Bilkul <em>kadak chai</em> jaisi! ☕💕</p>
+      </article>
+
+      <article class="card">
+        <h3>💖 Pure Vibes</h3>
+        <p>Tum jaisi <strong>kind</strong> aur <strong>classy</strong> ladki kam milti hai — tumhari vibe hi alag level ki <em>positive</em> hai! ✨</p>
+      </article>
+
+      <article class="card">
+        <h3>🌼 Nazar Na Lage</h3>
+        <p>Itni <strong>cute</strong> lagti ho aaj ki <em>nazrein</em> bhi muskurane lagti hain. Buri nazar 🧿 se hamesha door raho!</p>
+      </article>
+
+      <article class="card">
+        <h3>🌈 Colorful Day</h3>
+        <p>Aaj tumhare liye khushiyon ka <em>rainbow</em> — pink pyaar, yellow sunshine, blue shanti aur purple dreams! 🌈</p>
+      </article>
+    </section>
+
+    <footer>
+      Made with 💕 for <strong>Annu</strong> — "Khush raho, apna khayal rakho, aur hamesha muskurao!" 😊
+    </footer>
+  </div>
+
+  <script>
+    // Floating emojis across the screen
+    const EMOJIS = ["☀️","💖","🌸","✨","🌼","🦋","🌈","🌷","💫","🌟"]; 
+    const confetti = document.getElementById('confetti');
+    const makeFloaty = () => {
+      for(let i=0;i<20;i++){
+        const span = document.createElement('span');
+        span.className = 'floaty';
+        span.textContent = EMOJIS[Math.floor(Math.random()*EMOJIS.length)];
+        span.style.setProperty('--x', Math.random()*100 + 'vw');
+        span.style.setProperty('--t', (14 + Math.random()*12) + 's');
+        span.style.fontSize = (16 + Math.random()*22) + 'px';
+        span.style.opacity = .85;
+        confetti.appendChild(span);
+        // small spread in time
+        setTimeout(()=> span.style.top = '100vh', i*300);
+      }
+    };
+    makeFloaty();
+    setInterval(makeFloaty, 8000);
+
+    // Rotating compliments
+    const lines = [
+      '💛 "Annu, tumhari hasi se subah ki roshni aur bhi pyari lagti hai!"',
+      '🌞 "Good Morning meri superstar — aaj tum jo chaho wo mile!"',
+      '🌷 "Tumhari goodness ka rang sabse khoobsurat hai — stay shining!"',
+      '🫶 "Dil se dua: tumhari har mehnat ka double meetha result mile!"',
+      '🌟 "Annu, tum ho to har din thoda extra special lagta hai!"',
+      '🧡 "Smile karte rehna — tumhari vibe se hi to atmosphere pretty ban jata!"'
+    ];
+    const rotator = document.getElementById('rotator');
+    let idx = 0;
+    setInterval(()=>{
+      idx = (idx + 1) % lines.length;
+      rotator.style.opacity = 0;
+      setTimeout(()=>{ rotator.innerHTML = lines[idx]; rotator.style.opacity = 1; }, 300);
+    }, 3500);
+
+    // Copy & WhatsApp share
+    const msg = `Good Morning, ANNU ☀️💖\n\nUtho meri bestie — aaj ka din tumhari muskurahat se shuru! 🌸✨\nTumhari smile mera roz ka sunshine hai. Khush raho, apna khayal rakho! 😊🫶`;
+    const copyBtn = document.getElementById('copyBtn');
+    copyBtn.addEventListener('click', async ()=>{
+      try{ await navigator.clipboard.writeText(msg); copyBtn.textContent = '✅ Copied!'; setTimeout(()=>copyBtn.textContent='📋 Copy Wish', 1400);}catch(e){alert('Copy failed, long-press and select Copy.');}
+    });
+
+    const wa = document.getElementById('waShare');
+    const encoded = encodeURIComponent(msg + "\n\n— With 💕");
+    wa.href = `https://wa.me/?text=${encoded}`;
+  </script>
+</body>
+</html>
